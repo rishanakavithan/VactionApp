@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/addVacation"
+        android:title="Add new Vacation"
+        android:orderInCategory="1"
+        android:icon="@drawable/add"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/deleteAll"
+        android:title="Delete All"
+        android:orderInCategory="3"
+        android:icon="@drawable/delete"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/helpMain"
+        android:title="Help"
+        android:orderInCategory="4"
+        app:showAsAction="never"/>
+
+
+</menu>

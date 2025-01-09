@@ -1,0 +1,75 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="5dp"
+    tools:context=".MainActivity">
+
+
+    <include
+        android:id="@+id/toolbar_id"
+        layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+
+    <Spinner
+        android:id="@+id/sortSpinner_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar_id"
+        android:layout_margin="8dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentEnd="true"
+        />
+
+
+    <ListView
+        android:id="@+id/listView_id"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@id/sortSpinner_id"
+        android:layout_above="@id/footer_layout"
+        android:divider="#0D3535"
+        android:dividerHeight="1dp"/>
+
+
+    <TextView
+        android:id="@+id/noItemView_id"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar_id"
+        android:layout_above="@id/footer_layout"
+        android:text="@string/noItem_string"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:visibility="gone" />
+
+
+    <LinearLayout
+        android:id="@+id/footer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <Button
+            android:id="@+id/CurrentAddress_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Click Here for Current GPS"
+            android:textSize="18dp"
+            android:backgroundTint="@color/colorPrimary"/>
+
+        <TextView
+            android:id="@+id/currentAddress_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your address"
+            android:textSize="18dp" />
+    </LinearLayout>
+</RelativeLayout>
